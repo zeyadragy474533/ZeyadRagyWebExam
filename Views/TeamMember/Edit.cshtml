@@ -1,0 +1,19 @@
+﻿@model ZeyadRagyWebExam.Models.TeamMember
+<form asp-action="Edit" method="post">
+	<dev>
+		<input asp-for="Id" type="hidden" />
+	</dev>
+	<dev>
+		<label>Name</label>
+		<input asp-for="Name" />
+	</dev>
+	<dev>
+		<label>Email</label>
+		<input asp-for="Email" />
+	</dev>
+	<dev>
+		<label>Role</label>
+		<input asp-for="Role" />
+	</dev>
+	<button type="submit" class="btn btn-success">SaveChanges</button>
+</form>

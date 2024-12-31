@@ -1,0 +1,37 @@
+﻿@model IEnumerable<ZeyadRagyWebExam.Models.Job>
+
+<table class="table">
+	<thead>
+		<tr>
+			<th>Id</th>
+			<th>Title</th>
+			<th>Description</th>
+			<th>Status</th>
+			<th>Priority</th>
+			<th>Deadline</th>
+			<th>ProjectId</th>
+			<th>TeamMemberId</th>
+		</tr>
+	</thead>
+	<tbody>
+
+
+		@foreach (var index in Model)
+		{
+			<tr>
+				<td>@index.Id</td>
+				<td>@index.Title</td>
+				<td>@index.Description</td>
+				<td>@index.Status</td>
+				<td>@index.Priority</td>
+				<td>@index.Deadline</td>
+				<td>@index.ProjectId</td>
+				<td>@index.TeamMemberId</td>
+			</tr>
+
+		}
+
+
+	</tbody>
+</table>
+

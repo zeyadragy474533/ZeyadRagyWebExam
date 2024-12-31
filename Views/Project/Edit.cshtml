@@ -1,0 +1,25 @@
+﻿@model ZeyadRagyWebExam.Models.Project
+<form asp-action="Edit" method="post">
+	<dev>
+     <input asp-for="Id" type="hidden" />
+	
+	</dev>
+	<dev>
+		<label>Name</label>
+		<input asp-for="Name" />
+		 <span asp-validation-for="Name" ></span>
+	</dev>
+	<dev>
+		<label>Description</label>
+		<input asp-for="Description" />
+	</dev>
+	<dev>
+		<label>StartDate</label>
+		<input asp-for="StartDate" />
+	</dev>
+	<dev>
+		<label>EndDate</label>
+		<input asp-for="EndDate" />
+	</dev>
+	<button type="submit" class="btn btn-success">SaveChanges</button>
+</form>

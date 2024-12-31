@@ -1,0 +1,88 @@
+﻿@model IEnumerable<ZeyadRagyWebExam.Models.Job>
+
+
+
+<table class="table">
+	<thead>
+		<tr>
+			<th>Id</th>
+			<th>Title</th>
+			<th>Description</th>
+			<th>Status</th>
+			<th>Priority</th>
+			<th>Deadline</th>
+			<th>ProjectId</th>
+			<th>TeamMemberId</th>
+			<th>Actions</th>
+		</tr>
+	</thead>
+	<tbody>
+
+
+		@foreach (var index in Model)
+		{
+			<tr>
+				<td>@index.Id</td>
+				<td>@index.Title</td>
+				<td>@index.Description</td>
+				<td>@index.Status</td>
+				<td>@index.Priority</td>
+				<td>@index.Deadline</td>
+				<td>@index.ProjectId</td>
+				<td>@index.TeamMemberId</td>
+				<td>
+					<form class="d-inline" asp-action="Delete" method="post">
+						<input name="id" type="hidden" value="@index.Id" />
+						<button class=" btn btn-danger">Delete</button>
+					</form>
+					<form class="d-inline" asp-action="Edit" method="get">
+						<input name="id" type="hidden" value="@index.Id" />
+						<button class="btn btn-success">Update</button>
+					</form>
+@* 					<form class="d-inline" asp-action="View" method="post">
+						<input name="id" type="hidden" value="@index.Id" />
+						<button class="btn btn-secondary">View</button>
+					</form> *@
+				</td>
+			</tr>
+
+		}
+
+
+	</tbody>
+</table>
+<h1>
+	Edit on status
+</h1>
+<form asp-action="Create" method="post">
+	<dev>
+		<label>Title</label>
+		<input name="Title" />
+	</dev>
+	<dev>
+		<label>Description</label>
+		<input name="Description" />
+	</dev>
+	<dev>
+		<label>Status</label>
+		<input name="Status" />
+	</dev>
+	<dev>
+		<label>Priority</label>
+		<input name="Priority" />
+	</dev>
+	<dev>
+		<label>Deadline</label>
+		<input name="Deadline" />
+	</dev>
+	<dev>
+		<label>ProjectId</label>
+		<input name="ProjectId" />
+	</dev>
+	<dev>
+		<label>TeamMemberId</label>
+		<input name="TeamMemberId" />
+	</dev>
+
+	<button type="submit" class="btn btn-success">Save</button>
+</form>
